@@ -1,6 +1,6 @@
 package Automation_Tasks;
 
-//Given an array of integers, implement the BubbleSort algorithm for sorting the elements of the array
+// Given an array of integers, determine the sum of odd numbers and the amount of even numbers
 
 public class Task_5 {
 

@@ -1,6 +1,6 @@
 package Automation_Tasks;
 
-//Given a string of characters, determine if it is a palindrome or not
+// Given a string of characters, determine if it is a palindrome or not
 
 public class Task_1 {
 

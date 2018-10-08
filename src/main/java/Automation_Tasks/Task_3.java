@@ -1,38 +1,39 @@
 package Automation_Tasks;
 
-//Given an array of floating point numbers, inverse the elements of the array
+// Given an array of floating point numbers, inverse the elements of the array
 
 import java.util.ArrayList;
+import java.util.Random;
+import java.util.Scanner;
 
 public class Task_3 {
+
+    public static float generateRandomFloat() {
+        Random random = new Random();
+        return random.nextFloat();
+    }
+
     public static void main(String[] args) {
 
-//     private void reverseElements(){
         ArrayList<Float> floatArray = new ArrayList<>();
         ArrayList<Float> reversedArray = new ArrayList<>();
-        floatArray.add(3.5f);
-        floatArray.add(4.1f);
-        floatArray.add(2.6f);
-        floatArray.add(9.3f);
-        floatArray.add(5.5f);
-        floatArray.add(8.7f);
-//        float[] elementsArray = {3.5f, 4.1f, 2.6f, 9.3f, 5.5f, 8.7f};
-//        float[] reversedArray = new float[floatArray.size() - 1];
+
+        System.out.println("Introduce the number of floats to generate:");
+        Scanner scan = new Scanner(System.in);
+        int number = scan.nextInt();
+
+        for(int i = 0; i < number; i++) {
+            floatArray.add(generateRandomFloat());
+        }
+
+        System.out.println("Your generated array: " + floatArray);
 
         int length = floatArray.size();
-
-        for (int n = length - 1; n > 0; n--) {
+        for (int n = length - 1; n > -1; n--) {
             float temp = floatArray.get(n);
             reversedArray.add(temp);
         }
-        System.out.println(reversedArray);
+        System.out.println("Your reversed array: " + reversedArray);
 
     }
-//        public void reversedArray (Float[] floatArray){
-//            int length = floatArray.length;
-//            for (int i = 0; i < length; i++) {
-//                int inversedElement = length - 1 - i;
-//                System.out.println(floatArray[inversedElement]);
-//            }
-//        }
 }

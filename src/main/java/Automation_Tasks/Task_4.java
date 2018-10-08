@@ -1,15 +1,34 @@
 package Automation_Tasks;
 
-//Given an array of integers, implement the BubbleSort algorithm for sorting the elements of the array
+// Given an array of integers, implement the BubbleSort algorithm for sorting the elements of the array
 
 import java.util.Arrays;
+import java.util.Random;
+import java.util.Scanner;
 
 public class Task_4 {
 
+        public static int generateRandomInt(int upperRange){
+        Random random = new Random();
+        return random.nextInt(upperRange);
+    }
+
     public static void main (String[] args) {
 
-        int[] bubbleArray = {5, 4, 7, 9, 1, 3, 4, 2};
+        System.out.println("Introduce the number of integers to generate:");
+        Scanner scan = new Scanner(System.in);
+        int number = scan.nextInt();
 
+        // Generate an int array
+        System.out.println("Your array is: ");
+        int[] bubbleArray = new int[number];
+        for(int i = 0; i < bubbleArray.length; i++){
+            bubbleArray[i] = generateRandomInt(100);
+            System.out.print(bubbleArray[i] + " ");
+        }
+        System.out.println();
+
+        // BubbleSort implementation
         boolean swap = true;
         while(swap){
             swap = false;
@@ -22,17 +41,7 @@ public class Task_4 {
                 }
             }
         }
-//        int length = bubbleArray.length;
-//
-//        for(int i = 0; i < length; i++){
-//            for (int n = 1; n < length - i; n++){
-//                if (bubbleArray[n - 1] > bubbleArray[n]) {
-//                    int temp = bubbleArray[n - 1];
-//                    bubbleArray[n - 1] = bubbleArray[n];
-//                    bubbleArray[n] = temp;
-//                }
-//            }
-//        }
-        System.out.println(Arrays.toString(bubbleArray));
+        System.out.println("Sorted array: ");
+       System.out.println(Arrays.toString(bubbleArray));
     }
 }
