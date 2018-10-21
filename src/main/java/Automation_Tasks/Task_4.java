@@ -27,8 +27,14 @@ public class Task_4 {
             System.out.print(bubbleArray[i] + " ");
         }
         System.out.println();
+        bubbleSort(bubbleArray);
 
-        // BubbleSort implementation
+        System.out.println("Sorted array: ");
+        System.out.println(Arrays.toString(bubbleArray));
+    }
+
+    // BubbleSort implementation
+    public static void bubbleSort(int[] bubbleArray){
         boolean swap = true;
         while(swap){
             swap = false;
@@ -41,7 +47,6 @@ public class Task_4 {
                 }
             }
         }
-        System.out.println("Sorted array: ");
-       System.out.println(Arrays.toString(bubbleArray));
     }
+
 }
