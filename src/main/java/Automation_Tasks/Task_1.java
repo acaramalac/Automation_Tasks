@@ -2,10 +2,16 @@ package Automation_Tasks;
 
 // Given a string of characters, determine if it is a palindrome or not
 
+import java.util.Scanner;
+
 public class Task_1 {
 
     public static void main(String[] args) {
-        String str = "hahahah";
+
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter the word to check: ");
+        String str = scan.next();
+
         if(isPalindrome(str)) {
             System.out.println("Palindrome");
         } else {
