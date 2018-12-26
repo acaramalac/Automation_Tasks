@@ -44,10 +44,10 @@ public class Task_9 {
 
     }
 
-    public static void findingDuplicates(){}
-
-    public static void divisor(){}
-
-    public static void friendlyNumbers(){}
+//    public static void findingDuplicates(){}
+//
+//    public static void divisor(){}
+//
+//    public static void friendlyNumbers(){}
 
 }
