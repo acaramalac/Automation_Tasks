@@ -49,4 +49,20 @@ public class Task_4 {
         }
     }
 
+    public static void decreasingBubbleSort(int[] bubbleArray){
+        boolean swap = true;
+        while(swap){
+            swap = false;
+            for (int i = 1; i < bubbleArray.length; i++){
+                if(bubbleArray[i - 1] < bubbleArray[i]){
+                    int temp = bubbleArray[i - 1];
+                    bubbleArray[i - 1] = bubbleArray[i];
+                    bubbleArray[i] = temp;
+                    swap = true;
+                }
+            }
+        }
+    }
+
+
 }
