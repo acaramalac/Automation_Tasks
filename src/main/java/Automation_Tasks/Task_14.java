@@ -1,4 +1,16 @@
 // Given a list of coins with different values (1, 3, 10, 25, 50), determine the minimum amount of coins needed to sum up a certain amount of money
+
+//[20] -> sum of array bigger than 37? NO -> add it to itself
+//[20, 20] greater than 37? YES (20 + 20) -> remove last and jump to smaller coin
+//[20, 15] 35 OK
+//[20, 15, 15] 50 NO
+//[20, 15, 7] 42 NO
+// Replace biggest number and repeat
+//[15] 15 OK
+//[15, 15] 30 OK
+//[15, 15, 15] 45 NO
+//[15, 15, 7] 37! RETURN NUMBER!
+
 package Automation_Tasks;
 
 import java.util.Scanner;
@@ -23,30 +35,8 @@ public class Task_14 {
             }
         }
         return result;
-
-//
-//        for(int i = 0; i < coinsCount; i++){
-//            if ( coins[i] == amount){
-//                return coins[i];
-//            } else if (coins[i] < amount && result < amount){
-//                result += coins[i];
-//                i--;
-//            } else { continue;}
-//        }
-//    return 0;
     }
 
-
-//[20] -> sum of array bigger than 37? NO -> add it to itself
-//[20, 20] greater than 37? YES (20 + 20) -> remove last and jump to smaller coin
-//[20, 15] 35 OK
-//[20, 15, 15] 50 NO
-//[20, 15, 7] 42 NO
-// Replace biggest number and repeat
-//[15] 15 OK
-//[15, 15] 30 OK
-//[15, 15, 15] 45 NO
-//[15, 15, 7] 37! RETURN NUMBER!
     public static void main(String[] args) {
 
         Scanner scan = new Scanner(System.in);

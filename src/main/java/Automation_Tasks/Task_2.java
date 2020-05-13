@@ -13,7 +13,7 @@ public class Task_2 {
 
     public static void main(String[] args) {
 
-        int n = 7;
+        int n = 8;
         for (int p = 1; p < n; p++) {
 
 //             for (int space = n - p; space > 0; space--){
